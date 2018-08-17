@@ -1,0 +1,25 @@
+{
+  "name": "PhoenixAPI",
+  "version": "0.0.1",
+  "description": "None of Your Buisness",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "discord.js": "^11.3.2",
+    "node": "^10.5.0",
+    "sleep": "^5.1.1",
+    "fs" : "0.0.1-security"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
