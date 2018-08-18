@@ -21,5 +21,9 @@ PhoenixLogs.on('disconnected', Phoenix => {
 PixEmergency.send(`${ErrorTypes.errorPrefix} Phoenix API & Logs Has Been Disconnected From the Discord API`) 
 });
 
+PixBoot.send("Phoenix API Connecting")
+PhoenixAPI.login(process.env.TOKEN).catch(e => {
+  PixEmergency.send(e.toString());
+  PixBoot.send("Phoenix API Has Crashed **Reboot Now!**")
+});
 
-PhoenixAPI.login(process.env.TOKEN)
