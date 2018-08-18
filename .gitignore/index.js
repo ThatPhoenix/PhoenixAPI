@@ -27,7 +27,7 @@ PixEmergency.send(`${ErrorTypes.infoPrefix} Phoenix API & Logs Is now Reconnecti
 
 
 PixBoot.send("Phoenix API Connecting")
-PhoenixAPI.login(process.env.TOKE).catch(error => {
+PhoenixAPI.login(process.env.TOKEN).catch(error => {
   PixEmergency.send(`${ErrorTypes.errorPrefix} PhoenixAPI `+ error.toString());
   PixBoot.send(`${ErrorTypes.errorPrefix} Phoenix API Has Crashed **Reboot Now!**`)
 });
