@@ -17,12 +17,12 @@ console.log("PhoenixAPI has Connected Successfully to the Discord API")
 PixBoot.send(`${ErrorTypes.infoPrefix} System Is Running On Version Phoenix API & Logs ${PhoenixAPIVER}`);
 });
 
-PhoenixLogs.on('disconnected', Phoenix => {
+PhoenixAPI.on('disconnected', Phoenix => {
 PixEmergency.send(`${ErrorTypes.errorPrefix} Phoenix API & Logs Has Been Disconnected From the Discord API`) 
 });
 
 PixBoot.send("Phoenix API Connecting")
-PhoenixAPI.login(process.env.TOKEN).catch(e => {
+PhoenixAPI.login(process.env.TOKN).catch(e => {
   PixEmergency.send(e.toString());
   PixBoot.send("Phoenix API Has Crashed **Reboot Now!**")
 });
