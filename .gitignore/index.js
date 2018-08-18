@@ -21,6 +21,11 @@ PhoenixAPI.on('disconnected', Phoenix => {
 PixEmergency.send(`${ErrorTypes.errorPrefix} Phoenix API & Logs Has Been Disconnected From the Discord API`) 
 });
 
+PhoenixAPI.on('reconnecting', Phoenix => {
+PixEmergency.send(`${ErrorTypes.infoPrefix} Phoenix API & Logs Is now Reconnecting To the Discord API `) 
+});
+
+
 PixBoot.send("Phoenix API Connecting")
 PhoenixAPI.login(process.env.TOKE).catch(error => {
   PixEmergency.send(`${ErrorTypes.errorPrefix} PhoenixAPI `+ error.toString());
