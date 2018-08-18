@@ -22,8 +22,8 @@ PixEmergency.send(`${ErrorTypes.errorPrefix} Phoenix API & Logs Has Been Disconn
 });
 
 PixBoot.send("Phoenix API Connecting")
-PhoenixAPI.login(process.env.TOKN).catch(e => {
-  PixEmergency.send(e.toString());
-  PixBoot.send("Phoenix API Has Crashed **Reboot Now!**")
+PhoenixAPI.login(process.env.TOKEN).catch(e => {
+  PixEmergency.send(`${ErrorTypes.errorPrefix}`+ toString()));
+  PixBoot.send(`${ErrorTypes.errorPrefix} Phoenix API Has Crashed **Reboot Now!**`)
 });
 
