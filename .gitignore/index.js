@@ -6,7 +6,8 @@ const PixEmergency = new Discord.WebhookClient((process.env.EmergencyID), (proce
 const ErrorTypes = {
   infoPrefix: ':information_source:',
   errorPrefix: ':sos:',
-  successPrefix: ':white_check_mark:'
+  successPrefix: ':white_check_mark:',
+  warningprefix: ':warning:'
 }
 
 
@@ -22,13 +23,13 @@ PixEmergency.send(`${ErrorTypes.errorPrefix} Phoenix API & Logs Has Been Disconn
 });
 
 PhoenixAPI.on('reconnecting', Phoenix => {
-PixEmergency.send(`${ErrorTypes.infoPrefix} Phoenix API & Logs Is now Reconnecting To the Discord API `) 
+PixEmergency.send(`${ErrorTypes.warningPrefix} Phoenix API & Logs Is now Reconnecting To the Discord API `) 
 });
 
 
-PixBoot.send("Phoenix API Connecting")
+PixBoot.send(`${ErrorTypes.warningPrefix} Starting Up PhoenixAPI Written By Phoenix & HasanBrands Version: ${PhoenixAPIVER} `)
 PhoenixAPI.login(process.env.TOKEN).catch(error => {
   PixEmergency.send(`${ErrorTypes.errorPrefix} PhoenixAPI `+ error.toString());
-  PixBoot.send(`${ErrorTypes.errorPrefix} Phoenix API Has Crashed **Reboot Now!**`)
+  PixBoot.send(`${ErrorTypes.errorPrefix} PhoenixAPI Has Crashed **Reboot Now!**`)
 });
 
