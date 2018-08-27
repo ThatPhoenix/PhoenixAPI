@@ -7,7 +7,7 @@ const ErrorTypes = {
   infoPrefix: ':information_source:',
   errorPrefix: ':sos:',
   successPrefix: ':white_check_mark:',
-  warningprefix: ':warning:'
+  warningPrefix: ':warning:'
 }
 
 
