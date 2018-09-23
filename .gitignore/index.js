@@ -12,7 +12,7 @@ const ErrorTypes = {
 
 
 PhoenixAPI.on('ready', () => {
-PhoenixAPI.user.setActivity(`Phoenix API ${PhoenixAPIVER} `)
+PhoenixAPI.user.setActivity(`PhoenixAPI | Maintenence `)
 console.log("PhoenixAPI has Connected Successfully to the Discord API")
   PixBoot.send(`${ErrorTypes.successPrefix} System Has Started Up Successfully`);
 PixBoot.send(`${ErrorTypes.infoPrefix} System Is Running On Version Phoenix API & Logs ${PhoenixAPIVER}`);
